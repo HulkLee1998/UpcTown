@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,
+    chrome=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <title>all source column chart</title>
+</head>
+
+<body>
+    <div id="container" style="height: 800px;"></div>
+     <script type="text/javascript" src="jquery.js"></script> 
+
+    <script type="text/javascript">
+    
+    function string2Array(string) {
+        eval("var result = " + decodeURI(string));
+        return result;
+    }
+    
+        $(function () {
+            $.get("json.php", function(json) {
+                var d = string2Array(json);
+
+                
+                var categories = ['河北省（冀）', '山东省（齐）', '辽宁省（辽）', '黑龙江省（黑）', '吉林省（吉）', '甘肃省（陇）', '青海省（青）', '河南省（豫）', '江苏省（苏）', '湖北省（鄂）', '湖南省（湘）', '江西省（赣）', '浙江省（浙）', '广东省（粤）', '云南省（滇）', '福建省（闽）', '台湾省（台）', '海南省（琼）', '山西省（晋）', '四川省（川）', '陕西省（陕）', '贵州省（黔）', '安徽省（皖）', '重庆市', '北京市', '上海市', '天津市', '广西壮族自治区', '内蒙古自治区', '西藏自治区', '新疆维吾尔自治区', '宁夏回族自治区', '澳门特别行政区', '香港特别行政区'];
+                var chart = Highcharts.chart('container', {
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '全体学生生源情况统计图'
+                    },
+                    xAxis: {
+                        categories: categories,
+                        title: {
+                            text: null
+                        }
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: '人口总量 (人)',
+                            align: 'high'
+                        },
+                        labels: {
+                            overflow: 'justify'
+                        }
+                    },
+                    tooltip: {
+                        valueSuffix: ' 人'
+                    },
+                    plotOptions: {
+                        bar: {
+                            dataLabels: {
+                                enabled: true,
+                                allowOverlap: true // 允许数据标签重叠
+                            }
+                        }
+                    },
+                    series: [{
+                        name: '当前生源人口数',
+                        data: [24, 63, 31, 15, 78, 19, 10, 24, 26, 20, 25,
+                            33, 34, 5, 27, 30, 22, 56, 18,
+                            65, 18, 18, 20, 40, 36, 20, 21,
+                            36, 39, 5, 27, 20, 33,23]
+                    }]
+                });
+
+            });
+        });
+    </script>
+</body>
+
+</html>
