@@ -10,7 +10,7 @@ function quesql($k,$v) {
         $arr[] = $row[$k];
     }
     
-    echo json_encode($arr);
+    echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     $conn->close();
 }
 

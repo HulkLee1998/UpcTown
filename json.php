@@ -3,11 +3,11 @@
 include_once("connect.php");
 $conn=connsql();
 
-$sql = "select active from mapdata order by id asc";
+$sql = "select renshu from from_jiguan order by ID asc";
 $result=$conn->query($sql);
 
 while($row=$result->fetch_assoc()){
-	$arr[] = $row['active'];
+	$arr[] = $row['renshu'];
 }
 
 echo json_encode($arr);
