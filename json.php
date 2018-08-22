@@ -24,7 +24,7 @@ $sql = "select " . $k . " from " . $v . " order by id asc";
 $result=$conn->query($sql);
 
 while($row=$result->fetch_assoc()){
-    $arr[] = $row[$k];
+    $arr[] = (int)$row[$k];
 }
 
 echo json_encode($arr,JSON_UNESCAPED_UNICODE);
