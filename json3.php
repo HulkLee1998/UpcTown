@@ -3,15 +3,20 @@
 include_once("connect.php");
 $conn=connsql();
 
-$sql = "select * from znum_xueyuan order by id asc" ;
+$sql = "select * from znum_xueyuan where id<>12 order by id asc" ;
 $result=$conn->query($sql);
 
 while($row=$result->fetch_assoc()){
-    $arr[] = $row['2014'];
-    $arr[] = $row['2015'];
-    $arr[] = $row['2016'];
-    $arr[] = $row['2017'];
+    $arr[] = (int)$row['2014'];
+    $arr[] = (int)$row['2015'];
+    $arr[] = (int)$row['2016'];
+    $arr[] = (int)$row['2017'];
 }
+    $arr[] = "2014级";
+    $arr[] = "2015级";
+    $arr[] = "2016级";
+    $arr[] = "2017级";
+    
 
 echo json_encode($arr,JSON_UNESCAPED_UNICODE);
 $conn->close();

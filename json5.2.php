@@ -3,14 +3,18 @@
 include_once("connect.php");
 $conn=connsql();
 
-$sql = "select * from  order by id asc" ;
+$sql = "select * from student where score>84.9 order by score desc" ;
 $result=$conn->query($sql);
 
 while($row=$result->fetch_assoc()){
-    $arr[] = $row[''];
-    $arr[] = $row[''];
-    $arr[] = $row[''];
-    $arr[] = $row[''];
+    $arr[] = $row['name'];
+    $arr[] = $row['id'];
+    $arr[] = $row['sex'];
+    $arr[] = $row['jiguan'];
+    $arr[] = $row['xueyuan'];
+    $arr[] = $row['zhuanye'];
+    $arr[] = $row['nianji'];
+    $arr[] = $row['score'];
 }
 
 echo json_encode($arr,JSON_UNESCAPED_UNICODE);

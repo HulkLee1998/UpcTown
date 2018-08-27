@@ -7,7 +7,7 @@ $sql = "select xiaofei from xiaofei_nianji order by nianji asc" ;
 $result=$conn->query($sql);
 
 while($row=$result->fetch_assoc()){
-    $arr[] = $row['xiaofei'];
+    $arr[] = (int)$row['xiaofei'];
 }
 
 echo json_encode($arr,JSON_UNESCAPED_UNICODE);

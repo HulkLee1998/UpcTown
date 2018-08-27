@@ -2,8 +2,8 @@
 
 include_once("json0.php");
 
-$k="";
-$v="";
+$k="num";
+$v="zhaosheng";
 quesql($k,$v);
 
 ?>

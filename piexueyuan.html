@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,
+    chrome=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <title>xueyuan fan chart</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <div id="container1" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container1', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '地球科学与技术学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[0]
+                            }, {
+                                name: e[1],
+                                y: d[1]
+                            }, {
+                                name: e[2],
+                                y: d[2]
+                            }, {
+                                name: e[3],
+                                y: d[3]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+    <div id="container2" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container2', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '石油工程学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[4]
+                            }, {
+                                name: e[1],
+                                y: d[5]
+                            }, {
+                                name: e[2],
+                                y: d[6]
+                            }, {
+                                name: e[3],
+                                y: d[7]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container3" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container3', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '化学工程学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[8]
+                            }, {
+                                name: e[1],
+                                y: d[9]
+                            }, {
+                                name: e[2],
+                                y: d[10]
+                            }, {
+                                name: e[3],
+                                y: d[11]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container4" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container4', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '机电工程学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[12]
+                            }, {
+                                name: e[1],
+                                y: d[13]
+                            }, {
+                                name: e[2],
+                                y: d[14]
+                            }, {
+                                name: e[3],
+                                y: d[15]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container5" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container5', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '材料科学与工程学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[16]
+                            }, {
+                                name: e[1],
+                                y: d[17]
+                            }, {
+                                name: e[2],
+                                y: d[18]
+                            }, {
+                                name: e[3],
+                                y: d[19]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container6" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container6', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '信息与控制工程学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[20]
+                            }, {
+                                name: e[1],
+                                y: d[21]
+                            }, {
+                                name: e[2],
+                                y: d[22]
+                            }, {
+                                name: e[3],
+                                y: d[23]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container7" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container7', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '储运与建筑工程学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[24]
+                            }, {
+                                name: e[1],
+                                y: d[25]
+                            }, {
+                                name: e[2],
+                                y: d[26]
+                            }, {
+                                name: e[3],
+                                y: d[27]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container8" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container8', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '计算机与通信工程学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[28]
+                            }, {
+                                name: e[1],
+                                y: d[29]
+                            }, {
+                                name: e[2],
+                                y: d[30]
+                            }, {
+                                name: e[3],
+                                y: d[31]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container9" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container9', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '经济管理学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[32]
+                            }, {
+                                name: e[1],
+                                y: d[33]
+                            }, {
+                                name: e[2],
+                                y: d[34]
+                            }, {
+                                name: e[3],
+                                y: d[35]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+
+    <div id="container10" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container10', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '理学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[36]
+                            }, {
+                                name: e[1],
+                                y: d[37]
+                            }, {
+                                name: e[2],
+                                y: d[38]
+                            }, {
+                                name: e[3],
+                                y: d[39]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+
+    <div id="container11" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container11', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '文学院学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[40]
+                            }, {
+                                name: e[1],
+                                y: d[41]
+                            }, {
+                                name: e[2],
+                                y: d[42]
+                            }, {
+                                name: e[3],
+                                y: d[43]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+    <div id="container12" style="">
+        <script type="text/javascript">
+
+
+            function string2Array(string) {
+                eval("var result = " + decodeURI(string));
+                return result;
+            }
+
+            $(function () {
+                $.get("json3.php", function (json) {
+                    var d = string2Array(json);
+                    var e = new Array();
+                    e[0] = d[48];
+                    e[1] = d[49];
+                    e[2] = d[50];
+                    e[3] = d[51];
+
+
+                    var categories = e;
+                    Highcharts.chart('container12', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: '体育教学部学生人数统计图'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    distance: 3,
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'People',
+                            colorByPoint: true,
+                            data: [{
+                                name: e[0],
+                                y: d[44]
+                            }, {
+                                name: e[1],
+                                y: d[45]
+                            }, {
+                                name: e[2],
+                                y: d[46]
+                            }, {
+                                name: e[3],
+                                y: d[47]
+                            }]
+                        }]
+                    });
+
+                });
+            });
+
+        </script>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

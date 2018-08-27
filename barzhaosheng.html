@@ -22,7 +22,7 @@
     }
     
         $(function () {
-            $.get("json.php", function(json) {
+            $.get("json6.php", function(json) {
                 var d = string2Array(json);
                 var e = new Array();
                 
@@ -36,7 +36,7 @@
                         type: 'bar'
                     },
                     title: {
-                        text: '全体学生生源情况统计图'
+                        text: '招生情况统计图'
                     },
                     xAxis: {
                         categories: categories,
@@ -47,7 +47,7 @@
                     yAxis: {
                         min: 0,
                         title: {
-                            text: '人口总量 (人)',
+                            text: '学生人数 (人)',
                             align: 'high'
                         },
                         labels: {
@@ -61,12 +61,12 @@
                         bar: {
                             dataLabels: {
                                 enabled: true,
-                                allowOverlap: true // 允许数据标签重叠
+                                allowOverlap: false // 允许数据标签重叠
                             }
                         }
                     },
                     series: [{
-                        name: '当前生源人口数',
+                        name: '当前招生人口数',
                         data: e
                     }]
                 });
