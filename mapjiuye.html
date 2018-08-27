@@ -80,7 +80,7 @@
                             st.hover(function(e) {
                                 st.animate({fill: "#fdd", stroke: "#eee"}, 500);
                                 R.safari();
-                                $("#tip").css({"top": (e.clientY - xOffset) + "px", "left": (e.clientX - yOffset) + "px"}).fadeIn("fast").html("<h4>" + china[state]['name'] + "</h4><p>活跃用户数：" + prodata + "</p>");
+                                $("#tip").css({"top": (e.clientY - xOffset) + "px", "left": (e.clientX - yOffset) + "px"}).fadeIn("fast").html("<h4>" + china[state]['name'] + "</h4><p>人数：" + prodata + "</p>");
                             }, function() {
                                 st.animate({fill: fillcolor, stroke: "#eee"}, 500);
                                 R.safari();

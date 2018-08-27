@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-        <title>招生地图</title>
+        <title>全体学生生源地图</title>
         <meta name="keywords" content="中国地图,raphael.js地图数据展示" />
         <link rel="stylesheet" type="text/css" href="common.css" />
         <style type="text/css">
@@ -21,14 +21,14 @@
             <div class="demo">
                 
                 <div id="label">
-                    <span>人多</span>
+                    <span>高</span>
                     <span style="background-color:#005c86"></span>
                     <span style="background-color:#0084be"></span>
                     <span style="background-color:#00a2e9"></span>
                     <span style="background-color:#3fbeef"></span>
                     <span style="background-color:#97d6f5"></span>
                     <span style="background-color:#d7eef8"></span>
-                    <span>人少</span>
+                    <span>低</span>
                 </div>
                 <div id="map"></div>
                 <div id="tip"></div>
@@ -40,7 +40,7 @@
         <script type="text/javascript" src="chinamapPath.js"></script>
         <script type="text/javascript">
             $(function() {
-                $.get("json6.php", function(json) {
+                $.get("json.php", function(json) {
                     var data = string2Array(json);
                     var flag;
                     var arr = new Array();
@@ -80,7 +80,7 @@
                             st.hover(function(e) {
                                 st.animate({fill: "#fdd", stroke: "#eee"}, 500);
                                 R.safari();
-                                $("#tip").css({"top": (e.clientY - xOffset) + "px", "left": (e.clientX - yOffset) + "px"}).fadeIn("fast").html("<h4>" + china[state]['name'] + "</h4><p>人数：" + prodata + "</p>");
+                                $("#tip").css({"top": (e.clientY - xOffset) + "px", "left": (e.clientX - yOffset) + "px"}).fadeIn("fast").html("<h4>" + china[state]['name'] + "</h4><p>活跃用户数：" + prodata + "</p>");
                             }, function() {
                                 st.animate({fill: fillcolor, stroke: "#eee"}, 500);
                                 R.safari();
