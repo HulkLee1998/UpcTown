@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,
+    chrome=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <title>all student per month consume</title>
+    <style type="text/css">
+        /* Border styles */
+        table,
+        tr,
+        td,
+        th {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+
+        #table-1 thead,
+        #table-1 th {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(211, 202, 221);
+
+        }
+
+        #table-1 th {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(211, 202, 221);
+        }
+
+        /* Padding and font style */
+        #table-1 th {
+            padding: 5px 10px;
+            font-size: 14px;
+            font-family: sans-serif, Verdana;
+            color: rgb(95, 74, 121);
+        }
+
+        #table-1 td {
+            padding: 5px 10px;
+            font-size: 12px;
+            font-family: Verdana;
+            color: rgb(95, 74, 121);
+        }
+
+        /* Alternating background colors */
+        #table-1 tr:nth-child(even) {
+            background: rgb(223, 216, 232)
+        }
+
+        #table-1 tr:nth-child(odd) {
+            background: #FFF
+        }
+
+
+
+        @media screen and (max-width: 35.5em) {
+            table {
+                border: 0;
+                width: 100%;
+            }
+
+            table thead {
+                display: none;
+            }
+
+            table tr {
+                margin-bottom: 10px;
+                display: block;
+                border-bottom: 2px solid #ddd;
+            }
+
+            table td {
+                display: block;
+                text-align: right;
+                font-size: 13px;
+                border-bottom: 1px dotted #ccc;
+                text-align: center;
+            }
+
+            table td:last-child {
+                border-bottom: 0;
+            }
+
+            table td:before {
+                content: attr(data-label);
+                float: left;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script type="text/javascript">
+
+        function string2Array(string) {
+            eval("var result = " + decodeURI(string));
+            return result;
+        }
+
+        $(function () {
+            $.get("json5.2.php", function (json) {
+                var d = string2Array(json);
+
+                document.getElementById("a0").innerHTML = d[0];
+                document.getElementById("a1").innerHTML = d[1];
+                document.getElementById("a2").innerHTML = d[2];
+                document.getElementById("a3").innerHTML = d[3];
+                document.getElementById("a4").innerHTML = d[4];
+                document.getElementById("a5").innerHTML = d[5];
+                document.getElementById("a6").innerHTML = d[6];
+                document.getElementById("a7").innerHTML = d[7];
+                
+                document.getElementById("b0").innerHTML = d[8];
+                document.getElementById("b1").innerHTML = d[9];
+                document.getElementById("b2").innerHTML = d[10];
+                document.getElementById("b3").innerHTML = d[11];
+                document.getElementById("b4").innerHTML = d[12];
+                document.getElementById("b5").innerHTML = d[13];
+                document.getElementById("b6").innerHTML = d[14];
+                document.getElementById("b7").innerHTML = d[15];
+                           
+                document.getElementById("c0").innerHTML = d[16];
+                document.getElementById("c1").innerHTML = d[17];
+                document.getElementById("c2").innerHTML = d[18];
+                document.getElementById("c3").innerHTML = d[19];
+                document.getElementById("c4").innerHTML = d[20];
+                document.getElementById("c5").innerHTML = d[21];
+                document.getElementById("c6").innerHTML = d[22];
+                document.getElementById("c7").innerHTML = d[23];
+                
+                document.getElementById("d0").innerHTML = d[24];
+                document.getElementById("d1").innerHTML = d[25];
+                document.getElementById("d2").innerHTML = d[26];
+                document.getElementById("d3").innerHTML = d[27];
+                document.getElementById("d4").innerHTML = d[28];
+                document.getElementById("d5").innerHTML = d[29];
+                document.getElementById("d6").innerHTML = d[30];
+                document.getElementById("d7").innerHTML = d[31];
+                
+                document.getElementById("e0").innerHTML = d[32];
+                document.getElementById("e1").innerHTML = d[33];
+                document.getElementById("e2").innerHTML = d[34];
+                document.getElementById("e3").innerHTML = d[35];
+                document.getElementById("e4").innerHTML = d[36];
+                document.getElementById("e5").innerHTML = d[37];
+                document.getElementById("e6").innerHTML = d[38];
+                document.getElementById("e7").innerHTML = d[39];
+                
+                document.getElementById("f0").innerHTML = d[40];
+                document.getElementById("f1").innerHTML = d[41];
+                document.getElementById("f2").innerHTML = d[42];
+                document.getElementById("f3").innerHTML = d[43];
+                document.getElementById("f4").innerHTML = d[44];
+                document.getElementById("f5").innerHTML = d[45];
+                document.getElementById("f6").innerHTML = d[46];
+                document.getElementById("f7").innerHTML = d[47];
+                
+                document.getElementById("g0").innerHTML = d[48];
+                document.getElementById("g1").innerHTML = d[49];
+                document.getElementById("g2").innerHTML = d[50];
+                document.getElementById("g3").innerHTML = d[51];
+                document.getElementById("g4").innerHTML = d[52];
+                document.getElementById("g5").innerHTML = d[53];
+                document.getElementById("g6").innerHTML = d[54];
+                document.getElementById("g7").innerHTML = d[55];
+
+                
+                document.getElementById("h0").innerHTML = d[56];
+                document.getElementById("h1").innerHTML = d[57];
+                document.getElementById("h2").innerHTML = d[58];
+                document.getElementById("h3").innerHTML = d[59];
+                document.getElementById("h4").innerHTML = d[60];
+                document.getElementById("h5").innerHTML = d[61];
+                document.getElementById("h6").innerHTML = d[62];
+                document.getElementById("h7").innerHTML = d[63];
+                
+                document.getElementById("i0").innerHTML = d[64];
+                document.getElementById("i1").innerHTML = d[65];
+                document.getElementById("i2").innerHTML = d[66];
+                document.getElementById("i3").innerHTML = d[67];
+                document.getElementById("i4").innerHTML = d[68];
+                document.getElementById("i5").innerHTML = d[69];
+                document.getElementById("i6").innerHTML = d[70];
+                document.getElementById("i7").innerHTML = d[71];
+                
+                document.getElementById("j0").innerHTML = d[72];
+                document.getElementById("j1").innerHTML = d[73];
+                document.getElementById("j2").innerHTML = d[74];
+                document.getElementById("j3").innerHTML = d[75];
+                document.getElementById("j4").innerHTML = d[76];
+                document.getElementById("j5").innerHTML = d[77];
+                document.getElementById("j6").innerHTML = d[78];
+                document.getElementById("j7").innerHTML = d[79];
+                
+
+                
+            });
+            
+        });
+
+    </script>
+    <form>
+        <table id="table-1" cellspacing="0" border-collapse="collapse">
+            <thead>
+                <tr>
+                    <th>排名</th>
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>性别</th>
+                    <th>籍贯</th>
+                    <th>学院</th>
+                    <th>专业</th>
+                    <th>年级</th>
+                    <th>学分绩</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td id="a0">姓名</td>
+                    <td id="a1">学号</td>
+                    <td id="a2">性别</td>
+                    <td id="a3">籍贯</td>
+                    <td id="a4">学院</td>
+                    <td id="a5">专业</td>
+                    <td id="a6">年级</td>
+                    <td id="a7">学分绩</td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td id="b0">姓名</td>
+                    <td id="b1">学号</td>
+                    <td id="b2">性别</td>
+                    <td id="b3">籍贯</td>
+                    <td id="b4">学院</td>
+                    <td id="b5">专业</td>
+                    <td id="b6">年级</td>
+                    <td id="b7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td id="c0">姓名</td>
+                    <td id="c1">学号</td>
+                    <td id="c2">性别</td>
+                    <td id="c3">籍贯</td>
+                    <td id="c4">学院</td>
+                    <td id="c5">专业</td>
+                    <td id="c6">年级</td>
+                    <td id="c7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td id="d0">姓名</td>
+                    <td id="d1">学号</td>
+                    <td id="d2">性别</td>
+                    <td id="d3">籍贯</td>
+                    <td id="d4">学院</td>
+                    <td id="d5">专业</td>
+                    <td id="d6">年级</td>
+                    <td id="d7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td id="e0">姓名</td>
+                    <td id="e1">学号</td>
+                    <td id="e2">性别</td>
+                    <td id="e3">籍贯</td>
+                    <td id="e4">学院</td>
+                    <td id="e5">专业</td>
+                    <td id="e6">年级</td>
+                    <td id="e7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td id="f0">姓名</td>
+                    <td id="f1">学号</td>
+                    <td id="f2">性别</td>
+                    <td id="f3">籍贯</td>
+                    <td id="f4">学院</td>
+                    <td id="f5">专业</td>
+                    <td id="f6">年级</td>
+                    <td id="f7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td id="g0">姓名</td>
+                    <td id="g1">学号</td>
+                    <td id="g2">性别</td>
+                    <td id="g3">籍贯</td>
+                    <td id="g4">学院</td>
+                    <td id="g5">专业</td>
+                    <td id="g6">年级</td>
+                    <td id="g7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td id="h0">姓名</td>
+                    <td id="h1">学号</td>
+                    <td id="h2">性别</td>
+                    <td id="h3">籍贯</td>
+                    <td id="h4">学院</td>
+                    <td id="h5">专业</td>
+                    <td id="h6">年级</td>
+                    <td id="h7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td id="i0">姓名</td>
+                    <td id="i1">学号</td>
+                    <td id="i2">性别</td>
+                    <td id="i3">籍贯</td>
+                    <td id="i4">学院</td>
+                    <td id="i5">专业</td>
+                    <td id="i6">年级</td>
+                    <td id="i7">学分绩</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td id="j0">姓名</td>
+                    <td id="j1">学号</td>
+                    <td id="j2">性别</td>
+                    <td id="j3">籍贯</td>
+                    <td id="j4">学院</td>
+                    <td id="j5">专业</td>
+                    <td id="j6">年级</td>
+                    <td id="j7">学分绩</td>
+                </tr>
+            </tbody>
+
+
+        </table>
+    </form>
+
+
+</body>
+
+</html>

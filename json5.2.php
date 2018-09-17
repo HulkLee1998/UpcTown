@@ -3,7 +3,7 @@
 include_once("connect.php");
 $conn=connsql();
 
-$sql = "select * from student where score>84.9 order by score desc" ;
+$sql = "select * from student where score>0 order by score desc limit 10" ;
 $result=$conn->query($sql);
 
 while($row=$result->fetch_assoc()){
@@ -16,7 +16,7 @@ while($row=$result->fetch_assoc()){
     $arr[] = $row['nianji'];
     $arr[] = $row['score'];
 }
-
+   
 echo json_encode($arr,JSON_UNESCAPED_UNICODE);
 $conn->close();
 //输出学分绩前十学生的 姓名，学院，年级，省份，学分绩；
